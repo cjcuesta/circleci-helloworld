@@ -18,7 +18,7 @@ commands:
     parameters:
       message:
         type: string
-        default: "hello world2"
+        default: "hello world25"
     steps:
       - run: echo << parameters.message >>
 
