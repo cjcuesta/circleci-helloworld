@@ -14,14 +14,6 @@ commands:
         default: "hello world"
     steps:
       - run: echo << parameters.message >>
-  echo2:
-    parameters:
-      message:
-        type: string
-        default: "hello world25"
-    steps:
-      - run: echo << parameters.message >>
-
 
 jobs:
   hello-job:
@@ -29,9 +21,7 @@ jobs:
     steps:
       - checkout # check out the code in the project directory
       - echo # run the `echo` command
-      - echo2
-      - run: echo "Esto es una prueba"
-
+      
 workflows:
   my-workflow:
     jobs:
